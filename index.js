@@ -13,11 +13,13 @@ for (var i = 0; i < numberOfDrums; i++) {
 	drumElements[i].addEventListener("click", function () {
 		clickAudio.play();
 		console.log(this.innerHTML);
+		buttonAnimation(this.innerHTML);
 	});
 } // end of for loop
 
 document.addEventListener("keypress", function(event){
 	makeSound(event.key);
+	buttonAnimation(event.key);
 });
 
 function makeSound(key) {
@@ -52,4 +54,12 @@ function makeSound(key) {
 		default:
 			console.log("wrong key!");
 	}
+}
+
+function buttonAnimation (currentKey) {
+	var activeButton = document.querySelector("." + currentKey);
+	activeButton.classList.add("pressed");
+	setTimeout(function() {
+		activeButton.classList.remove("pressed");
+	}, 100);
 }

@@ -1,6 +1,5 @@
 # DrumKit
-
+Simple drum kit
 <h1>
 Site is hosted here:
-https://alexberimbolo.github.io/DrumKit/
-</h1>
+https://alexhappycode.github.io/DrumKit/</h1>
